@@ -1,0 +1,289 @@
+*{
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+/* Colores a usar:
+
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;
+*/
+
+/*Para la sección del Header debemos:
+
+1-Solo para la versión mobile, ocultar el site y el login navbar.
+2-Para las versiones desktop y tablet mostrar el site y login navbar, pero ocultar la imagen
+del menú hamburguesa.
+
+*/
+/* header */
+header{
+    background-color: #EAC926;
+}
+#boxLogoFirst{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
+/*logo - marcado liebre and search*/
+#logo{
+    width: 50vw;
+}
+#logo img{
+    width: 80%;
+    padding: 10px;
+}
+#search{
+    width: 50vw;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+/*bar search*/
+input{
+    background-color: #ebebeb;
+    border-radius: 5px;
+    width: 60%;
+    padding: 5px;
+}
+.fa-magnifying-glass{
+    padding: 5px;
+    background-color: #ebebeb;
+    border-radius: 5px;
+    border: 2px #666 solid;
+    margin: 0 5px;
+}
+#cuotas{
+    display: flex;
+    justify-content: center;
+}
+#cuotas i{
+    margin: 0 10px;
+}
+/*navBar*/
+nav{
+    display: none;
+}
+/*boton hamburguesa*/
+.burger-menu i{
+    padding: 10px;
+    background-color: #03264C;
+    color: white;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+.burger-menu{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+/* 1- Navegación en tablets (ancho mínimo 361 px)
+   2- Navegación en desktop (ancho mínimo 769 px)
+   3-Solo en el caso mobile la descripción del artículo no se visualizará.
+
+● Agregar box-shadow. Para los dispositivos tablet o de resoluciones superiores,
+para ello nos pasaron esta propiedad* con los valores de CSS correspondientes:
+
+box-shadow: 0px 0px 10px rgb(100, 100, 100);
+*/
+
+/*----------------MAIN---------------------*/
+main{
+    background-color: #ebebeb;
+    padding-bottom: 25px;
+}
+/*banner*/
+#banner{
+    width: 100%;
+}
+#banner img{
+    width: 100%;
+}
+/* titu basado y ofertas */
+section h3{
+    color: #666;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 40px 0;
+}
+/*truck*/
+.fa-truck, .oferta{
+    color: #39b54a;
+}
+.oferta{
+    margin-left: 15px;
+}
+.fa-truck{
+    padding: 8px;
+    border: 1px #39b54a solid;
+    border-radius: 100%;
+}
+.trucks{
+    display: flex;
+    justify-content: end;
+}
+/*.fa-truck{
+    display: block;
+    font-size: 16px;
+    color: #39b54a;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px #39b54a solid;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    
+}*/
+.cardProduct{
+    margin-bottom: 40px;
+}
+.product{
+    display: flex;
+    justify-content: center;
+}
+.product img{
+    width: 100%;
+    padding: 0 10px;
+}
+.boxInfo{
+    display: inline-flex;
+    margin-bottom: 20px;
+}
+.info{
+    background-color: white;
+    margin: 0 10px;
+    padding: 15px;
+}
+.description{
+    display: none;
+}
+
+/* footer */
+footer{
+    background-color: white;
+    padding: 40px 20px 10px;
+}
+.fa-credit-card, .fa-gift, .fa-user-shield{
+    color: #03264C;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    margin: 10px 8px;
+}
+article h4, .infoFooter, h6{
+    color: #666;
+    text-align: center;
+    margin: 3px;
+}
+h6{
+    font-weight: lighter;
+}
+.articleFooter{
+    margin-bottom: 45px;
+}
+@media (min-width: 769px){
+    /* header - logo - search - cuotas */
+    .boxFirst{
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        padding-bottom: 100x;
+    }
+    #boxLogoFirst{
+        width: 70vw;
+    }
+    input{
+        width: 80%;
+    }
+    #cuotas{
+        width: 30vw;
+        align-items: center;
+        justify-content: center;
+    }
+      /*navBAr*/
+    nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    li a{
+        text-decoration: none;
+        color: black;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        align-self: center;
+    }
+    ul li{
+        padding: 10px;
+    }
+    /*boton hamburguesa*/
+    .burger-menu{
+        display: none;
+    }
+    /*----------------MAIN---------------------*/
+    .box{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .cardProduct{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 45%;
+        margin: 15px;
+    }
+    .product img{
+        padding: 0;
+    }
+    .info{
+        background-color: white;
+        margin: 0;
+        padding: 15px;
+    }
+    .description{
+        display: block;
+    }
+     /*footer*/
+     footer section{
+        display: flex;
+        justify-content: space-around;
+    }
+    .articleFooter{
+        margin: 20px;
+    }
+    h4{
+        font-size: 1.2rem;
+    }
+    .infoFooter{
+        font-size: 1rem;
+    }
+}
+@media (min-width: 1200px){
+    /* header - logo - search - cuotas */
+    .boxFirst{
+        display: flex;
+        justify-items: center;
+    }
+    input{
+        width: 100%;
+    }
+    /*navBAr*/
+    ul li{
+        padding: 20px;
+    }
+    /*----------------MAIN---------------------*/
+    .box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .cardProduct{
+        width: 22%;
+    }
+}
