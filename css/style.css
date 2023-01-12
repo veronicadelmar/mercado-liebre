@@ -1,6 +1,5 @@
 *{
 font-family: 'Poppins', sans-serif;
-font-family: 'Roboto', sans-serif;
 padding: 0;
 margin: 0;
 box-sizing: border-box;
@@ -14,24 +13,22 @@ Gris oscuro: #666;
 Gris claro: #ebebeb;
 Verde: #39b54a;
 */
-
 /*Para la sección del Header debemos:
 
 1-Solo para la versión mobile, ocultar el site y el login navbar.
 2-Para las versiones desktop y tablet mostrar el site y login navbar, pero ocultar la imagen
 del menú hamburguesa.
-
 */
 /* header */
 header{
     background-color: #EAC926;
 }
-#boxLogoFirst{
+/*logo - marcado liebre and search*/
+#box__logo__search{
     display: flex;
     align-items: center;
     width: 100vw;
 }
-/*logo - marcado liebre and search*/
 #logo{
     width: 50vw;
 }
@@ -39,13 +36,13 @@ header{
     width: 80%;
     padding: 10px;
 }
+/*search*/
 #search{
     width: 50vw;
     display: flex;
     justify-content: flex-end;
     padding: 20px;
 }
-/*bar search*/
 input{
     background-color: #ebebeb;
     border-radius: 5px;
@@ -53,17 +50,19 @@ input{
     padding: 5px;
 }
 .fa-magnifying-glass{
-    padding: 5px;
+    display: flex;
+    align-self: center;
+    padding: 7px;
     background-color: #ebebeb;
     border-radius: 5px;
     border: 2px #666 solid;
     margin: 0 5px;
 }
-#cuotas{
+#tdc{
     display: flex;
     justify-content: center;
 }
-#cuotas i{
+#tdc i{
     margin: 0 10px;
 }
 /*navBar*/
@@ -71,14 +70,14 @@ nav{
     display: none;
 }
 /*boton hamburguesa*/
-.burger-menu i{
+.burger__menu i{
     padding: 10px;
     background-color: #03264C;
     color: white;
     border-radius: 5px;
     margin: 20px 0;
 }
-.burger-menu{
+.burger__menu{
     display: flex;
     justify-content: center;
     font-size: 20px;
@@ -105,7 +104,7 @@ main{
 #banner img{
     width: 100%;
 }
-/* titu basado y ofertas */
+/* titulos basado en ultima visita y ofertas */
 section h3{
     color: #666;
     font-size: 1.5rem;
@@ -141,7 +140,7 @@ section h3{
     right: 20px;
     
 }*/
-.cardProduct{
+.card__product{
     margin-bottom: 40px;
 }
 .product{
@@ -152,7 +151,7 @@ section h3{
     width: 100%;
     padding: 0 10px;
 }
-.boxInfo{
+.box__info{
     display: inline-flex;
     margin-bottom: 20px;
 }
@@ -177,7 +176,7 @@ footer{
     justify-content: center;
     margin: 10px 8px;
 }
-article h4, .infoFooter, h6{
+article h4, .info__footer, h6{
     color: #666;
     text-align: center;
     margin: 3px;
@@ -185,24 +184,24 @@ article h4, .infoFooter, h6{
 h6{
     font-weight: lighter;
 }
-.articleFooter{
+.info__footer{
     margin-bottom: 45px;
 }
 @media (min-width: 769px){
     /* header - logo - search - cuotas */
-    .boxFirst{
+    .box__header{
         display: flex;
         justify-content: space-around;
         align-content: center;
         padding-bottom: 100x;
     }
-    #boxLogoFirst{
+    #box__logo__search{
         width: 70vw;
     }
     input{
         width: 80%;
     }
-    #cuotas{
+    #tdc{
         width: 30vw;
         align-items: center;
         justify-content: center;
@@ -222,10 +221,10 @@ h6{
         align-self: center;
     }
     ul li{
-        padding: 10px;
+        padding: 5px;
     }
     /*boton hamburguesa*/
-    .burger-menu{
+    .burger__menu{
         display: none;
     }
     /*----------------MAIN---------------------*/
@@ -233,7 +232,7 @@ h6{
         display: flex;
         flex-wrap: wrap;
     }
-    .cardProduct{
+    .card__product{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
         width: 45%;
         margin: 15px;
@@ -254,19 +253,19 @@ h6{
         display: flex;
         justify-content: space-around;
     }
-    .articleFooter{
+    .article__footer{
         margin: 20px;
     }
     h4{
         font-size: 1.2rem;
     }
-    .infoFooter{
+    .info__footer{
         font-size: 1rem;
     }
 }
 @media (min-width: 1200px){
     /* header - logo - search - cuotas */
-    .boxFirst{
+    .box__header{
         display: flex;
         justify-items: center;
     }
@@ -283,7 +282,7 @@ h6{
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    .cardProduct{
+    .card__product{
         width: 22%;
     }
 }
